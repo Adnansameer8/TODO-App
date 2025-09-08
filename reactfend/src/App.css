@@ -1,0 +1,140 @@
+/* ====== Global Reset ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* ====== App Container ====== */
+.app {
+  background: #fff;
+  width: 100%;
+  max-width: 600px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  animation: fadeIn 0.6s ease;
+}
+
+/* ====== Title ====== */
+h1 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #444;
+}
+
+/* ====== Form ====== */
+.task-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.task-form input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 2px solid #eee;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.task-form input:focus {
+  border-color: #667eea;
+  outline: none;
+  box-shadow: 0 0 6px rgba(102, 126, 234, 0.5);
+}
+
+.task-form button {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+}
+
+/* ====== Task List ====== */
+.tasks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ====== Task Item ====== */
+.task {
+  background: #f9f9ff;
+  padding: 14px 18px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+  border: 1px solid #eee;
+}
+
+.task:hover {
+  background: #f1f1ff;
+}
+
+.task.completed .title {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+/* ====== Task Title ====== */
+.task .title {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* ====== Buttons inside task ====== */
+.task button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: 8px;
+  color: #667eea;
+  transition: 0.2s;
+}
+
+.task button:hover {
+  transform: scale(1.2);
+  color: #764ba2;
+}
+
+/* ====== Empty State ====== */
+.empty {
+  text-align: center;
+  color: #888;
+  font-size: 15px;
+  margin-top: 30px;
+}
+
+/* ====== Animations ====== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
