@@ -3,11 +3,12 @@ name: Test Workflow
 on:
    push:
      branches:
-        - master
+        - main
+     
 
 jobs:
   hello:
     runs-on: unbuntu-latest
     steps:
       - name:Say hello
-        run: echo " Workflow is Working! "
+        run:echo " Workflow is Working! "
