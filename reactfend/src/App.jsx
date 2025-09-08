@@ -4,6 +4,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import HomeMan from "./components/HomeMan";
 import './App.css'
+import Demo from "./components/Demo";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <NavLink to="/register" style={{ marginRight: "20px" }}>
             Register
           </NavLink>
+          <NavLink to="/demo">DEMO</NavLink>
           <NavLink to="/login">Login</NavLink>
         </nav>
 
@@ -20,6 +22,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/homeman" element={<HomeMan />} />
+          <Route path="/demo" element={<Demo/>}></Route>
         </Routes>
       </div>
     </Router>
